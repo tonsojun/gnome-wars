@@ -76,3 +76,51 @@ function fight() {
 	}
 	alert(winner);
 }
+
+const request = new XMLHttpRequest();
+
+const typeOfRequest = "GET";
+const placeWeAreCommunicatingWith = "https://theoctagon.dev/api/practice-room/gnomes/1";
+
+request.open(typeOfRequest, placeWeAreCommunicatingWith);
+request.onload = infoReceived;
+request.send();
+
+function infoReceived() {
+	console.log("The info has arrived");
+	console.log(request.responseText);
+
+	const infoAsObject = JSON.parse(request.responseText);
+
+	console.log("Now in object shape");
+	console.log(infoAsObject);
+}
+
+
+
+const findGnomeButton = document.getElementById("find-gnome");
+
+findGnomeButton.addEventListener("click", findGnome);
+
+function findGnome() {
+	//What's in the input?
+	const inputGnome = document.getElementById("gnome-input");
+
+	console.log("The number selected is " + inputGnome.value);
+}
+
+const findTrollButton = document.getElementById("find-troll");
+
+findTrollButton.addEventListener("click", findTroll);
+
+function findTroll() {
+	const inputTroll = document.getElementById("troll-input");
+	console.log("The number selected is " + inputTroll.value);
+}
+
+
+
+
+
+
+
