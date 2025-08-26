@@ -47,3 +47,16 @@ gnomeLevel.innerHTML = "Level: " + gnome.level;
 const gnomeHealth = document.getElementById("gnome-health");
 gnomeHealth.innerHTML = "Health: " + gnome.health;
 
+
+const trollName = document.getElementById("troll-name");
+trollName.innerHTML = "Name: " + troll.name;
+
+const trollWeapon = document.getElementById("troll-weapon");
+trollWeapon.innerHTML = "Weapon: " + troll.weapon;
+
+const trollLevel = document.getElementById("troll-level");
+trollLevel.innerHTML = "Level: " + troll.level;
+
+const trollHealth = document.getElementById("troll-health");
+trollHealth.innerHTML = "Health: " + troll.health;
+
