@@ -60,3 +60,19 @@ trollLevel.innerHTML = "Level: " + troll.level;
 const trollHealth = document.getElementById("troll-health");
 trollHealth.innerHTML = "Health: " + troll.health;
 
+
+
+const fightButton = document.getElementById("fight-button");
+
+fightButton.addEventListener("click", fight);
+
+function fight() {
+	if (gnome.health > troll.health) {
+		console.log("The gnome wins");
+		winner = gnome.name + "wins!";
+	} else {
+		console.log("The troll wins");
+		winner = troll.name + " wins!";
+	}
+	alert(winner);
+}
