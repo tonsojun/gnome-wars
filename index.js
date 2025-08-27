@@ -105,8 +105,30 @@ findGnomeButton.addEventListener("click", findGnome);
 function findGnome() {
 	//What's in the input?
 	const inputGnome = document.getElementById("gnome-input");
-
 	console.log("The number selected is " + inputGnome.value);
+ 
+	const address = "https://theoctagon.dev/api/practice-room/gnomes/" + inputGnome.value;
+	console.log("gnome address is https://theoctagon.dev/api/practice-room/gnomes/" + inputGnome.value);
+
+	const request = new XMLHttpRequest();
+
+	const typeOfRequest = "GET";
+	const placeWeAreCommunicatingWith = address;
+
+	request.open(typeOfRequest, placeWeAreCommunicatingWith);
+	request.onload = infoReceived;
+	request.send();
+
+	function infoReceived() {
+		console.log("The info has arrived");
+		console.log(request.responseText);
+
+		const infoAsObject = JSON.parse(request.responseText);
+
+		console.log("Now in object shape");
+		console.log(infoAsObject);
+	}
+
 }
 
 const findTrollButton = document.getElementById("find-troll");
@@ -118,7 +140,32 @@ function findTroll() {
 	console.log("The number selected is " + inputTroll.value);
 }
 
+function findTroll() {
+	const inputTroll = document.getElementById("troll-input");
+	console.log("The number selected is " + inputTroll.value);
 
+	const address = "https://theoctagon.dev/api/practice-room/trolls/" + inputTroll.value;
+	console.log("address for trolls is " + address);
+
+	const request = new XMLHttpRequest();
+
+	const typeOfRequest = "GET";
+	const placeWeAreCommunicatingWith = address;
+
+	request.open(typeOfRequest, placeWeAreCommunicatingWith);
+	request.onload = infoReceived;
+	request.send();
+
+	function infoReceived() {
+		console.log("the info has arrived");
+		console.log(request.responseText);
+
+		const infoAsObject = JSON.parse(request.responseText);
+
+		console.log("Now in object shape");
+		console.log(infoAsObject);
+	}
+}
 
 
 
