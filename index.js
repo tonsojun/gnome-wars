@@ -127,6 +127,18 @@ function findGnome() {
 
 		console.log("Now in object shape");
 		console.log(infoAsObject);
+
+		const gnomeName = document.getElementById("gnome-name");
+		gnomeName.innerHTML = "Name: " + infoAsObject.name;
+
+		const gnomeWeapon = document.getElementById("gnome-weapon");
+		gnomeWeapon.innerHTML = "Weapon: " + infoAsObject.weapon;
+
+		const gnomeLevel = document.getElementById("gnome-level");
+		gnomeLevel.innerHTML = "Level: " + infoAsObject.level;
+
+		const gnomeHealth = document.getElementById("gnome-health");
+		gnomeHealth.innerHTML = "Health: " + infoAsObject.health;
 	}
 
 }
@@ -164,6 +176,18 @@ function findTroll() {
 
 		console.log("Now in object shape");
 		console.log(infoAsObject);
+
+		const trollName = document.getElementById("troll-name");
+		trollName.innerHTML = "Name: " + infoAsObject.name;
+
+		const trollWeapon = document.getElementById("troll-weapon");
+		trollWeapon.innerHTML = "Weapon: " + infoAsObject.weapon;
+
+		const trollLevel = document.getElementById("troll-level");
+		trollLevel.innerHTML = "Level: " + infoAsObject.level;
+
+		const trollHealth = document.getElementById("troll-health");
+		trollHealth.innerHTML = "Health: " + infoAsObject.health;
 	}
 }
 
