@@ -1,7 +1,7 @@
 console.log("Hello");
 
 
-const gnome = {
+let gnome = {
     "id": 0,
     "name": "Jimmy",
     "weapon": "Wrench",
@@ -15,7 +15,7 @@ const gnome = {
     "isInvisible": true
 }
 
-const troll = {
+let troll = {
     "id": 0,
     "name": "Zgurub",
     "weapon": "Big Stick",
@@ -128,6 +128,8 @@ function findGnome() {
 		console.log("Now in object shape");
 		console.log(infoAsObject);
 
+		gnome = infoAsObject;
+
 		const gnomeName = document.getElementById("gnome-name");
 		gnomeName.innerHTML = "Name: " + infoAsObject.name;
 
@@ -176,6 +178,8 @@ function findTroll() {
 
 		console.log("Now in object shape");
 		console.log(infoAsObject);
+
+		troll = infoAsObject;
 
 		const trollName = document.getElementById("troll-name");
 		trollName.innerHTML = "Name: " + infoAsObject.name;
